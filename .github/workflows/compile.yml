@@ -23,4 +23,4 @@ jobs:
         uses: devops-infra/action-commit-push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          commit_message: [CI] Upload generated PDF
+          commit_message: "[CI] Upload generated PDF"
