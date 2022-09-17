@@ -1,0 +1,32 @@
+#!/bin/bash
+
+latex -interaction=batchmode anthology.tex
+
+# delete old bbl files
+for bblfile in `find */*Chapter.bbl`
+do
+    rm $bblfile
+done
+
+# delete lines starting with u in bib file (url lines)
+sed -i '/^u/d' bib/bib.bib
+
+# delete lines starting with abstract (the abstract)
+sed -i '/^abstract/d' bib/bib.bib
+
+# compile without references
+pdflatex -interaction=batchmode anthology.tex
+pdflatex -interaction=nonstopmode anthology.tex
+
+# run bibtex for each chapter
+for auxfile in `find */*Chapter.aux`
+do
+    bibtex $auxfile
+    bibtex $auxfile
+done
+
+# compile again with references
+pdflatex -interaction=batchmode anthology.tex
+pdflatex -interaction=nonstopmode anthology.tex
+pdflatex -interaction=batchmode anthology.tex
+pdflatex -interaction=nonstopmode anthology.tex

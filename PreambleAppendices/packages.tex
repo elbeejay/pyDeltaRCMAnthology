@@ -1,0 +1,45 @@
+% set up page layout
+\setstocksize{11in}{8.5in}
+\setlrmarginsandblock{1in}{1in}{*}
+
+\checkandfixthelayout 
+
+
+% import other packages
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{caption}
+\usepackage{rotating}
+
+\usepackage[svgnames]{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={DarkBlue},
+    citecolor={MediumBlue},
+    urlcolor={Blue}
+}
+
+\usepackage[sort, numbers, sectionbib]{natbib}
+\usepackage{chapterbib}
+%\bibliographystyle{abbrvnat}
+\renewcommand{\bibname}{References}
+
+
+\newcommand{\ddx}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand{\pdx}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\dx}[1]{\mathrm{d} #1 }
+\newcommand{\px}[1]{\partial #1 }
+\renewcommand{\bar}{\overline}
+
+\newcommand{\mypm}{\mathbin{\smash{%
+\raisebox{0.35ex}{%
+            $\underset{\raisebox{0.5ex}{$\smash -$}}{\smash+}$%
+            }%
+        }%
+    }%
+}

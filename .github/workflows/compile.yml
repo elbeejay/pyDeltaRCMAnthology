@@ -1,0 +1,18 @@
+# This workflow automatically compiles the anthology document
+
+name: compile-anthology
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git repository on runner
+        uses: actions/checkout@v3
+      - name: Compile LaTeX document
+        uses: xu-cheng/texlive-action/full@v1
+        run: ./compile_tex

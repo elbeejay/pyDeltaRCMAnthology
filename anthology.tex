@@ -1,0 +1,59 @@
+\documentclass[letterpaper, oneside, final]{memoir}
+
+% packages from file containing all of them
+\input{PreambleAppendices/packages}
+
+% what chapters to include/compile this time
+%\includeonly{ModelVariability/InherentVariabilityChapter}
+
+% document
+\begin{document}
+
+\title{Exploring \textit{pyDeltaRCM}: A Collection of Numerical Experiments\\\small{v0.1}}
+\author{Jayaram Hariharan}
+\maketitle
+
+\tableofcontents
+
+\chapter{Preamble}
+\include{PreambleAppendices/PreambleChapter}
+
+\chapter{Model Comparison - Original DeltaRCM and pyDeltaRCM}
+\include{DeltaRCM_ModelComparison/ModelComparisonChapter}
+
+\chapter{Runtime Variability}
+\include{RuntimeVariability/RuntimeVariabilityChapter}
+
+\chapter{Grid Resolution and Model Runtime}
+\include{CellResRuntime/CellResRuntimeChapter}
+\label{chap:resruntime}
+
+\chapter{Number of Parcels and Model Runtime}
+\include{NumParcelsRuntime/NpRuntimeChapter}
+\label{chap:npruntime}
+
+\chapter{Model Variability}
+\include{ModelVariability/InherentVariabilityChapter}
+
+\chapter{Influence of Basin Depth, $hB$}
+\include{BasinDepth/BasinDepthChapter}
+
+\chapter{Impact of Alpha value, $\alpha$}
+\include{AlphaImpact/AlphaValueChapter}
+
+\chapter{Impact of Beta value, $\beta$}
+\include{BetaImpact/BetaValueChapter}
+
+\chapter{Cell Resolution Impact on Model Results}
+\include{CellResAnalysis/CellResImpactChapter}
+
+\chapter{Impact of Number of Parcels on Model Results}
+\include{ParcelNumAnalysis/ParcelNumAnalysisChapter}
+
+\chapter{Inlet Discharge and Channel Geometry}
+\include{QandWidthDepth/QandWidthDepthChapter}
+
+% include appendices
+\include{PreambleAppendices/Appendices}
+
+\end{document}
