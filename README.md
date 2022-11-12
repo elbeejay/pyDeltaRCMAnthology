@@ -1,8 +1,9 @@
 # pyDeltaRCMAnthology
+[![DOI](https://zenodo.org/badge/537848865.svg)](https://zenodo.org/badge/latestdoi/537848865)
 
 A collection of small experiments conducted to explore the effects of model parameters on the outputs of the [pyDeltaRCM](https://deltarcm.org/pyDeltaRCM/) model. The curated results and findings of these experiments are summarized in the [PDF Anthology Document](https://github.com/elbeejay/pyDeltaRCMAnthology/blob/main/anthology.pdf) available in this repository.
 
-## Contributing to the Anthology
+## Contributing to the anthology
 
 The pyDeltaRCM model is open-source and this anthology is intended to be as well.
 Contributions are more than welcome, and encouraged.
@@ -27,3 +28,24 @@ Smaller contributions are welcome too, these can be as small as fixing a typo, o
 6. Add yourself to the list of authors in the `anthology.tex` file.
 7. To render the anthology, you can either locally run the `compile_tex` shell script that is present in the root of the repository to generate a local PDF, or you can push your changes to your local branch of GitHub and enable GitHub Actions. This repository has a GitHub Action which will automatically run the LaTeX commands and push a newly generated PDF to the repository after each commit.
 8. Once you are satisfied with your new chapter and additions to the anthology, please open a pull request with your changes!
+
+## Citing the anthology
+
+This anthology is archived on Zenodo (and therefore has a DOI) and can be cited as:
+
+> J. Hariharan. (2022). elbeejay/pyDeltaRCMAnthology: v0.1 (v0.1). Zenodo. https://doi.org/10.5281/zenodo.7315646
+
+or with the bibtex entry:
+
+```
+@software{j_hariharan_2022_7315646,
+  author       = {J. Hariharan},
+  title        = {elbeejay/pyDeltaRCMAnthology: v0.1},
+  month        = nov,
+  year         = 2022,
+  publisher    = {Zenodo},
+  version      = {v0.1},
+  doi          = {10.5281/zenodo.7315646},
+  url          = {https://doi.org/10.5281/zenodo.7315646}
+}
+```
